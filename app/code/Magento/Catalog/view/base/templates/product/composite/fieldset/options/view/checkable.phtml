@@ -43,7 +43,8 @@ if ($option) : ?>
         $checked = '';
         $count++;
         if ($arraySign) {
-            $checked = is_array($configValue) && in_array($value->getOptionTypeId(), $configValue) ? 'checked' : '';
+//            $checked = is_array($configValue) && in_array($value->getOptionTypeId(), $configValue) ? 'checked' : '';
+            $checked = /*is_array($configValue) && */in_array($value->getOptionTypeId(), explode(',', $configValue)) ? 'checked' : '';
         } else {
             $checked = $configValue == $value->getOptionTypeId() ? 'checked' : '';
         }
@@ -52,6 +53,13 @@ if ($option) : ?>
             $dataSelector .= '[' . $value->getOptionTypeId() . ']';
         }
         ?>
+
+        <h2>
+            Checked: <?= $checked ?><br>
+            ConfigValue: <?= gettype($configValue) ?><br>
+            getOptionTypeId: <?= $value->getOptionTypeId() ?><br>
+            Exploded: <?= print_r(explode(",", $configValue), true)?>
+        </h2>
 
         <div class="field choice admin__field admin__field-option">
             <input type="<?= $block->escapeHtmlAttr($optionType) ?>"
