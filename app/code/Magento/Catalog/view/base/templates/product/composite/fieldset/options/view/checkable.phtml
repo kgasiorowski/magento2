@@ -54,12 +54,12 @@ if ($option) : ?>
         }
         ?>
 
-        <h2>
-            Checked: <?= $checked ?><br>
-            ConfigValue: <?= gettype($configValue) ?><br>
-            getOptionTypeId: <?= $value->getOptionTypeId() ?><br>
-            Exploded: <?= print_r(explode(",", $configValue), true)?>
-        </h2>
+<!--        <h2>-->
+<!--            Checked: --><?//= $checked ?><!--<br>-->
+<!--            ConfigValue: --><?//= gettype($configValue) ?><!--<br>-->
+<!--            getOptionTypeId: <?//= $value->getOptionTypeId() ?><br>-->
+<!--            Exploded: --><?//= print_r(explode(",", $configValue), true)?>
+<!--        </h2>-->
 
         <div class="field choice admin__field admin__field-option">
             <input type="<?= $block->escapeHtmlAttr($optionType) ?>"
