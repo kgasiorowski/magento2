@@ -2,14 +2,14 @@
 
 namespace KGas\CustomExtensionAttribute\Plugin;
 
-use KGas\CustomExtensionAttribute\Model\ResourceModel\VipAttributesCollection\CollectionFactory;
-use KGas\CustomExtensionAttribute\Model\ResourceModel\VipAttributesResourceModel as ResourceModel;
-use KGas\CustomExtensionAttribute\Model\VipAttributesModel as Model;
-use KGas\CustomExtensionAttribute\Model\VipAttributesModelFactory as ModelFactory;
+use KGas\CustomExtensionAttribute\Model\ResourceModel\VipAttributes\CollectionFactory;
+use KGas\CustomExtensionAttribute\Model\ResourceModel\VipAttributes as ResourceModel;
+use KGas\CustomExtensionAttribute\Model\VipAttributes as Model;
+use KGas\CustomExtensionAttribute\Model\VipAttributesFactory as ModelFactory;
 use Magento\Customer\Api\CustomerRepositoryInterface;
 use Magento\Customer\Api\Data\CustomerInterface;
 
-class ProcessVIPAttributes
+class ProcessVipAttributes
 {
 
     /**

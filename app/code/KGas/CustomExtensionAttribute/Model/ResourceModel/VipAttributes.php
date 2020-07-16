@@ -4,7 +4,7 @@ namespace KGas\CustomExtensionAttribute\Model\ResourceModel;
 
 use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 
-class VipAttributesResourceModel extends AbstractDb
+class VipAttributes extends AbstractDb
 {
     protected function _construct()
     {

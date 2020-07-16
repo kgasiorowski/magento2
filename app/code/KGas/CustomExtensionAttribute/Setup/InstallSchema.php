@@ -33,13 +33,13 @@ class InstallSchema implements InstallSchemaInterface
             ['identity' => false, 'unsigned' => true, 'nullable' => false, 'primary' => false],
             'Customer ID'
         )->addColumn(
-            'VIP_date_start',
+            'vip_date_start',
             \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
             null,
             ['nullable' => true],
             'VIP Date Start'
         )->addColumn(
-            'VIP_date_end',
+            'vip_date_end',
             \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
             null,
             ['nullable' => true],

@@ -2,14 +2,14 @@
 
 namespace KGas\CustomExtensionAttribute\Model;
 
-use KGas\CustomExtensionAttribute\Model\ResourceModel\VipAttributesResourceModel;
+use KGas\CustomExtensionAttribute\Model\ResourceModel\VipAttributes as ResourceModel;
 use Magento\Framework\Model\AbstractModel;
 
-class VipAttributesModel extends AbstractModel
+class VipAttributes extends AbstractModel
 {
     protected function _construct()
     {
-        $this->_init(VipAttributesResourceModel::class);
+        $this->_init(ResourceModel::class);
     }
 
     /**
@@ -33,7 +33,7 @@ class VipAttributesModel extends AbstractModel
      */
     public function getVipDateStart()
     {
-        return $this->getData('VIP_date_start');
+        return $this->getData('vip_date_start');
     }
 
     /**
@@ -42,7 +42,7 @@ class VipAttributesModel extends AbstractModel
      */
     public function setVipDateStart($vipDateStart)
     {
-        return $this->getData('VIP_date_start', $vipDateStart);
+        return $this->getData('vip_date_start', $vipDateStart);
     }
 
     /**
@@ -50,7 +50,7 @@ class VipAttributesModel extends AbstractModel
      */
     public function getVipDateEnd()
     {
-        return $this->getData('VIP_date_end');
+        return $this->getData('vip_date_end');
     }
 
     /**
@@ -59,6 +59,6 @@ class VipAttributesModel extends AbstractModel
      */
     public function setVipDateEnd($vipDateEnd)
     {
-        return $this->setData('VIP_date_end', $vipDateEnd);
+        return $this->setData('vip_date_end', $vipDateEnd);
     }
 }
