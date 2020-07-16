@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Customer\Api\CustomerRepositoryInterface">
+        <plugin name="processVipAttributes" type="KGas\CustomExtensionAttribute\Plugin\ProcessVipAttributes" />
+    </type>
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="kgas_vip_extension_attributes_test" xsi:type="object">KGas\CustomExtensionAttribute\Command\VipCommand</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="KGas\CustomExtensionAttribute\Command\VipCommand">
+        <arguments>
+            <argument name="customerRepository" xsi:type="object">Magento\Customer\Api\CustomerRepositoryInterface\Proxy</argument>
+        </arguments>
+    </type>
+</config>
