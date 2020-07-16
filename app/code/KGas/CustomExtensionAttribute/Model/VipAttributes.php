@@ -15,9 +15,9 @@ class VipAttributes extends AbstractModel
     /**
      * @return int
      */
-    public function getCustomerId() : int
+    public function getCustomerId()
     {
-        return (int)$this->getData('customer_id');
+        return $this->getData('customer_id');
     }
 
     /**
