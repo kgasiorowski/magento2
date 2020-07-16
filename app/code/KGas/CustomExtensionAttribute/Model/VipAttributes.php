@@ -42,7 +42,7 @@ class VipAttributes extends AbstractModel
      */
     public function setVipDateStart($vipDateStart)
     {
-        return $this->getData('vip_date_start', $vipDateStart);
+        return $this->setData('vip_date_start', $vipDateStart);
     }
 
     /**
